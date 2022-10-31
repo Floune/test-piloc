@@ -19,12 +19,15 @@ credentials admin: `admin@admin.com`, `qslndmdqkhbsd`
     - "firstname",
     - "lastname",
     - "password",
+    - "password_confirmation"
     - "email"
+  
 }
 - `POST` `/login` {
 
     - "email"
     - "password"
+  
 }
 
 - `POST` `/user/update` {
@@ -33,6 +36,38 @@ credentials admin: `admin@admin.com`, `qslndmdqkhbsd`
     - "lastname"
     - "email"
     - id
+  
 }
 
+- `GET` `/user/load/{id}` 
+- `GET` `/user/index`
 - `DELETE` `/user/delete/{id}`
+
+- `POST` `/property/create` {
+
+    - "title"
+    - "street"
+    - "city"
+    - "zip"
+    - "price"
+    - "surface"
+    - "status"
+  
+}
+- `POST` `/property/update` {
+    - id
+    - "title"
+    - "street"
+    - "city"
+    - "zip"
+    - "price"
+    - "surface"
+    - "status"
+  
+}
+- `POST` `/property/search` {
+    - "city" optional
+    - "zip" optional
+    - "street" optional
+  
+}
