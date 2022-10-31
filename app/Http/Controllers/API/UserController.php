@@ -28,6 +28,7 @@ class UserController extends Controller
     public function load(UserLoadRequest $request) {
         $user = User::findOrFail($request->id);
         $payload = $user->toArray();
+        $payload["properties_count"] = $user->count;
         return response()->json($payload,200);
 
     }

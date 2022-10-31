@@ -51,4 +51,8 @@ class User extends Authenticatable
         return $this->hasMany(Property::class);
     }
 
+    public function getCountAttribute() {
+        return $this->properties->count();
+    }
+
 }
