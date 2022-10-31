@@ -26,4 +26,5 @@ Route::middleware('auth:api')->group(function(){
 
     Route::post("property/create", [\App\Http\Controllers\API\PropertyController::class, 'create']);
     Route::post("property/update", [\App\Http\Controllers\API\PropertyController::class, 'update']);
+    Route::post("property/search", [\App\Http\Controllers\API\PropertyController::class, 'search']);
 });
