@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "cbae7a28-9d6a-4896-b4e5-7d6c0aa3fb6a",
+		"name": "test collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24168758"
+	},
+	"item": [
+		{
+			"name": "properties",
+			"item": [
+				{
+					"name": "Create property",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMjM1MTFlYWU1OTVjNzBmNmJkNzMzNzgyNjEyYjAzMmRmYTE3OTkzMDczMjNlY2RlZmYyMTA3NmI1ZjZjNmMwZmI5NDQ1OGNiOTk2NmVjMTMiLCJpYXQiOjE2NjcyMzY5NzIuNDY3NzU4LCJuYmYiOjE2NjcyMzY5NzIuNDY3NzYsImV4cCI6MTY5ODc3Mjk3Mi40NDkyMDgsInN1YiI6IjciLCJzY29wZXMiOltdfQ.poTQgEGyzSQhoCPfI4P9raPiaeW_tf0GqHXPrOk1uz1ZxUvAauawr8g3ajH5KBLJi6iRYU1NmQEF-Pr2C4RWJJWbANj_c2BgFjMZbJVw30k57v-mLkfV7OWodd_6iHYRt8nQ9ip3FCuZeDWdAackdCKP4nwyPNX5dEt37JTlGJ6w5L_OgQIz9-cAyowv8d0JnvkD-UJMJANiOo37XQCw54gyZN_nmL8F25O4RFWrxthYOqwn1D59tH6cfQ_4AdNsJ0qBKG1K5HAcdyPNG5TvTx1K_P-9ZwOCa_xJLNGBagLJChgu5zv3cV-0Z0Eq96SogEquq2USXEoTwQrZL-LtNZRex28eC49wcyqPLbrdu1Arws89rNSXwrpzTWkD5kwVphxkRgJYP5qtjERP0f3FJCM9xP8fAHwNaVTVryuAEX9O6AdNNWyq_KDGW_adGbr8zmdeR8k6Ev6VnA63ZawsXcMkmXx5zrUYizUUmE3JYUzNJzc9cEp95ueDaOk1PNB0hyBqfbDJAnAlIskPb0oKnmxE90mmdlptRLflHbRYOJPz2P9Kh9VoKrlOlZ140Q3pUYGQo6DBxwrc9xdgUAzEF6tw3NyGQuPe4EuCN9tUimvcUqmDMQpgLpAkyq35okms2B-vuFPTea-vPqFIdiQfUmCQcrRUsUgTtXjB79C6ffs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Hotel\",\n    \"city\" : \"Paris\",\n    \"street\": \"rue de la paix\",\n    \"zip\": \"75000\",\n    \"surface\": 100,\n    \"price\": 2000,\n    \"status\": \"rented\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update property",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"jodsshn\",\n    \"lastname\": \"doe\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\",\n    \"email\": \"john@dsoe.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"jodhn\",\n    \"lastname\": \"doe\",\n    \"password\": \"password\",\n    \"email\": \"josshn@dsoe.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@admin.com\",\n    \"password\": \"qslndmdqkhbsd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMjM1MTFlYWU1OTVjNzBmNmJkNzMzNzgyNjEyYjAzMmRmYTE3OTkzMDczMjNlY2RlZmYyMTA3NmI1ZjZjNmMwZmI5NDQ1OGNiOTk2NmVjMTMiLCJpYXQiOjE2NjcyMzY5NzIuNDY3NzU4LCJuYmYiOjE2NjcyMzY5NzIuNDY3NzYsImV4cCI6MTY5ODc3Mjk3Mi40NDkyMDgsInN1YiI6IjciLCJzY29wZXMiOltdfQ.poTQgEGyzSQhoCPfI4P9raPiaeW_tf0GqHXPrOk1uz1ZxUvAauawr8g3ajH5KBLJi6iRYU1NmQEF-Pr2C4RWJJWbANj_c2BgFjMZbJVw30k57v-mLkfV7OWodd_6iHYRt8nQ9ip3FCuZeDWdAackdCKP4nwyPNX5dEt37JTlGJ6w5L_OgQIz9-cAyowv8d0JnvkD-UJMJANiOo37XQCw54gyZN_nmL8F25O4RFWrxthYOqwn1D59tH6cfQ_4AdNsJ0qBKG1K5HAcdyPNG5TvTx1K_P-9ZwOCa_xJLNGBagLJChgu5zv3cV-0Z0Eq96SogEquq2USXEoTwQrZL-LtNZRex28eC49wcyqPLbrdu1Arws89rNSXwrpzTWkD5kwVphxkRgJYP5qtjERP0f3FJCM9xP8fAHwNaVTVryuAEX9O6AdNNWyq_KDGW_adGbr8zmdeR8k6Ev6VnA63ZawsXcMkmXx5zrUYizUUmE3JYUzNJzc9cEp95ueDaOk1PNB0hyBqfbDJAnAlIskPb0oKnmxE90mmdlptRLflHbRYOJPz2P9Kh9VoKrlOlZ140Q3pUYGQo6DBxwrc9xdgUAzEF6tw3NyGQuPe4EuCN9tUimvcUqmDMQpgLpAkyq35okms2B-vuFPTea-vPqFIdiQfUmCQcrRUsUgTtXjB79C6ffs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 8,\n    \"lastname\": \"doe\",\n    \"firstname\": \"jane\",\n    \"email\": \"john@doe.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMjM1MTFlYWU1OTVjNzBmNmJkNzMzNzgyNjEyYjAzMmRmYTE3OTkzMDczMjNlY2RlZmYyMTA3NmI1ZjZjNmMwZmI5NDQ1OGNiOTk2NmVjMTMiLCJpYXQiOjE2NjcyMzY5NzIuNDY3NzU4LCJuYmYiOjE2NjcyMzY5NzIuNDY3NzYsImV4cCI6MTY5ODc3Mjk3Mi40NDkyMDgsInN1YiI6IjciLCJzY29wZXMiOltdfQ.poTQgEGyzSQhoCPfI4P9raPiaeW_tf0GqHXPrOk1uz1ZxUvAauawr8g3ajH5KBLJi6iRYU1NmQEF-Pr2C4RWJJWbANj_c2BgFjMZbJVw30k57v-mLkfV7OWodd_6iHYRt8nQ9ip3FCuZeDWdAackdCKP4nwyPNX5dEt37JTlGJ6w5L_OgQIz9-cAyowv8d0JnvkD-UJMJANiOo37XQCw54gyZN_nmL8F25O4RFWrxthYOqwn1D59tH6cfQ_4AdNsJ0qBKG1K5HAcdyPNG5TvTx1K_P-9ZwOCa_xJLNGBagLJChgu5zv3cV-0Z0Eq96SogEquq2USXEoTwQrZL-LtNZRex28eC49wcyqPLbrdu1Arws89rNSXwrpzTWkD5kwVphxkRgJYP5qtjERP0f3FJCM9xP8fAHwNaVTVryuAEX9O6AdNNWyq_KDGW_adGbr8zmdeR8k6Ev6VnA63ZawsXcMkmXx5zrUYizUUmE3JYUzNJzc9cEp95ueDaOk1PNB0hyBqfbDJAnAlIskPb0oKnmxE90mmdlptRLflHbRYOJPz2P9Kh9VoKrlOlZ140Q3pUYGQo6DBxwrc9xdgUAzEF6tw3NyGQuPe4EuCN9tUimvcUqmDMQpgLpAkyq35okms2B-vuFPTea-vPqFIdiQfUmCQcrRUsUgTtXjB79C6ffs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/delete/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"delete",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Load user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
