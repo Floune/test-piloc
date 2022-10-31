@@ -22,6 +22,7 @@ Route::middleware('auth:api')->group(function(){
     Route::post('user/update',[\App\Http\Controllers\API\UserController::class,'update']);
     Route::delete('user/delete/{id}',[\App\Http\Controllers\API\UserController::class,'delete']);
     Route::get('user/load/{id}',[\App\Http\Controllers\API\UserController::class,'load']);
+    Route::get('user/index',[\App\Http\Controllers\API\UserController::class,'index']);
 
     Route::post("property/create", [\App\Http\Controllers\API\PropertyController::class, 'create']);
     Route::post("property/update", [\App\Http\Controllers\API\PropertyController::class, 'update']);

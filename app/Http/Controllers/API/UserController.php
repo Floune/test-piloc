@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserDeleteRequest;
 use App\Http\Requests\UserEditRequest;
+use App\Http\Requests\UserListRequest;
 use App\Http\Requests\UserLoadRequest;
 use App\Models\User;
 use http\Env\Request;
@@ -30,7 +31,11 @@ class UserController extends Controller
         $payload = $user->toArray();
         $payload["properties_count"] = $user->count;
         return response()->json($payload,200);
+    }
 
+    public function index(UserListRequest $request) {
+        $payload = User::all()->toArray();
+        return response()->json($payload,200);
     }
 
 }

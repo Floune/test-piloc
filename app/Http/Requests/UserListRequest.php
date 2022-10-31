@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UserEditRequest extends FormRequest
+class UserListRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,8 +13,7 @@ class UserEditRequest extends FormRequest
      */
     public function authorize()
     {
-        $isOwner = in_array(request()->input("id"), Auth()->user()->id);
-        if (Auth()->user()->hasRole("admin") || $isOwner) {
+        if (Auth()->user()->hasRole("admin")) {
             return true;
         }
         return false;
@@ -28,10 +27,7 @@ class UserEditRequest extends FormRequest
     public function rules()
     {
         return [
-            "firstname" => "required",
-            "lastname" => "required",
-            "email" => "required|email",
-            "id" => "required",
+            //
         ];
     }
 }
